@@ -7,13 +7,11 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="card">
-                            <h1>Home content</h1>
-
+                            <h1>Forum Content</h1>
                         </div>
                     </div>
                 </div>
             </div>
-    </div>
-    </main>
+        </main>
     </div>
 @endsection

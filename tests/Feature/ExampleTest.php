@@ -18,4 +18,13 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    //Arrange
+    //Dodajemy do bazy danych wpis
+
+    //Act
+    //Wykonujemy zapytanie pod adresem wpisu
+
+    //Assert
+    //Sprawdzimy że w odpowiedzi znajduje się tytuł wpisu.
 }

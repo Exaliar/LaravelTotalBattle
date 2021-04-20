@@ -1,0 +1,28 @@
+.nav-link {
+    color: $color-second !important;
+    // font-size: large;
+    // padding-right: 30px;
+}
+
+.active {
+    color: $color-activ !important;
+}
+
+.main-color {
+    background: $color-mine;
+}
+
+.logo {
+    background-size: auto;
+    // width: 200px;
+    height: 50px;
+    background: url('/storage/logo.jpg');
+}
+
+.font-inconsolata {
+    font-family: $font-inconsolata;
+}
+
+.font-lemonada {
+    font-family: $font-lemonada;
+}
