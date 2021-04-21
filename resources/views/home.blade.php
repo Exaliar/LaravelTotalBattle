@@ -4,16 +4,10 @@
     <div id="app">
         <main class="py-4">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <h1>Home content</h1>
-
-                        </div>
-                    </div>
+                <div class="card">
+                    <h1>Home content</h1>
                 </div>
             </div>
-    </div>
-    </main>
+        </main>
     </div>
 @endsection

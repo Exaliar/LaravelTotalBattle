@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md main-color shadow">
     <div class="container">
         <a class="m-auto" href="{{ url('home') }}">
-            <img class="logo" src="{{ url('/storage/logo.jpg') }}" alt="">
+            <img class="logo" src="{{ url('/storage/logo-min.jpg') }}" alt="Home">
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
@@ -42,7 +42,7 @@
                         {{ Auth::user()->name }}
                     </a>
                     <a class="m-auto pr-5 font-inconsolata ml-4 h5 nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
+                                document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>
 
