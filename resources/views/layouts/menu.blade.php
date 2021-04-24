@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-md main-color shadow">
     <div class="container">
-        <a class="m-auto" href="{{ url('home') }}">
+        <a class="m-auto" href="{{ route('home.index') }}">
             <img class="logo" src="{{ url('/storage/logo-min.jpg') }}" alt="Home">
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="m-auto pr-5 font-inconsolata ml-4 h5 nav-link{{ request()->is('calculator/old') ? ' active' : '' }}" href="{{ route('calculator.old') }}">Calculator Old<span
+                    <a class="m-auto pr-5 font-inconsolata ml-4 h5 nav-link{{ request()->is('calculator/old') ? ' active' : '' }}" href="{{ route('calculator.old.index') }}">Calculator Old<span
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -42,7 +42,7 @@
                         {{ Auth::user()->name }}
                     </a>
                     <a class="m-auto pr-5 font-inconsolata ml-4 h5 nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
+                                                                    document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>
 
