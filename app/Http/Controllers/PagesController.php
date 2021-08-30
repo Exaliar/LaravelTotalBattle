@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    // public function index()
+
+    // public function home()
     // {
     //     return view('home');
     // }
@@ -14,16 +15,6 @@ class PagesController extends Controller
     public function calculator()
     {
         return view('calculator');
-    }
-
-    public function calculator_old()
-    {
-        return view('calculatorOld');
-    }
-
-    public function calculator_new()
-    {
-        return view('calculatorNew');
     }
 
     public function forum()

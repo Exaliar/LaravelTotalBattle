@@ -25,12 +25,10 @@ Route::get('', function () {
 
 Route::resources([
     'home' => HomePostController::class,
-    // 'calculatorOld' => CalculatorOldController::class
 ]);
+// Route::resource('home', HomePostController::class)->middleware('can:isAdmin')->except('index', 'show');
 
-Route::get('/calculator/old', [PagesController::class, 'calculator_old'])->name('calculator.old.index');
-Route::get('/calculator/new', [PagesController::class, 'calculator_new'])->name('calculator.new');
+Route::get('/calculator', [PagesController::class, 'calculator'])->name('calculator');
 Route::get('/forum', [PagesController::class, 'forum'])->name('forum');
 Route::get('/about', [PagesController::class, 'about'])->name('about');
-
 Route::get('/profile', [PagesController::class, 'profile'])->middleware('auth')->name('profile');
