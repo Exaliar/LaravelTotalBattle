@@ -3,7 +3,7 @@
 
 @include('layouts.header')
 
-<body>
+<body class="font-lemonada">
     @include('layouts.menu')
 
     @yield('content')

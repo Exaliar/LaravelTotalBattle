@@ -1,3 +1,7 @@
+body {
+    background: $color-mine;
+}
+
 .nav-link {
     color: $color-second !important;
     // font-size: large;
@@ -8,13 +12,25 @@
     color: $color-activ !important;
 }
 
-.main-color {
+.color-mine {
     background: $color-mine;
 }
 
+.color-mine-text {
+    color: $color-mine;
+}
+
+.color-second {
+    background: $color-second;
+}
+
+.color-second-text {
+    color: $color-second;
+}
+
 .logo {
-    // width: 200px;
-    height: 50px;
+    width: 200px;
+    // height: 50px;
 }
 
 .font-inconsolata {
@@ -23,4 +39,89 @@
 
 .font-lemonada {
     font-family: $font-lemonada;
+}
+
+.card-title {
+    color: $color-activ;
+}
+
+.card {
+    border: 1px solid $color-second;
+}
+
+.card-footer {
+    border-top: 1px solid $color-second;
+}
+
+/*    Footer      */
+.footer-main {
+    width: 100%;
+    margin-top: 60px;
+    box-shadow: -5px -5px 10px 5px black;
+
+    .contact-us {
+        .emai-button {
+            margin: 20px auto 0;
+            position: relative;
+
+            .input-text-contact {
+                border: none;
+                width: 400px;
+                height: 48px;
+                border-radius: 30px;
+                padding-left: 20px;
+                border: 2px solid $color-activ;
+            }
+
+            .input-button-contact {
+                border: none;
+                position: absolute;
+                width: 70px;
+                background-color: $color-activ;
+                height: 40px;
+                border-radius: 20px;
+                right: 4px;
+                top: 4px;
+                transition: width 0.2s ease-in-out;
+                color: $color-mine;
+
+                &:hover {
+                    width: 100px;
+                }
+
+                &:active {
+                    box-shadow: inset 2px 2px 6px 2px black, inset -2px -2px 6px 2px white;
+                }
+
+                &:focus {
+                    outline: none;
+                    border: 1px solid black;
+                }
+            }
+        }
+    }
+
+    .social-icon-footer {
+
+        font-size: 3rem;
+
+        a {
+            i {
+                margin-right: 20px;
+                text-decoration: none;
+                color: $color-second;
+                transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+                &:hover {
+                    color: $color-activ;
+                    transform: translateY(-3px);
+                }
+            }
+        }
+    }
+
+    .footer-menu-icon {
+        width: 25px;
+    }
+
 }
