@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">{{ 'TestMenuTB' }}</div>
                     <h1>Calculator New content</h1>
-                    @include('inc.armyMenu')
+                    {{-- @include('inc.armyMenu') --}}
                 </div>
             </div>
         </main>

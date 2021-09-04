@@ -16,5 +16,10 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(AdminSeeder::class);
         $this->call(HomePostSeeder::class);
+        $this->call(MonsterSeeder::class);
+        $this->call(NormalMonsterSquadSeeder::class);
+        $this->call(RareMonsterSquadSeeder::class);
+        $this->call(HeroicMonsterSquadSeeder::class);
+        $this->call(CitadelMonsterSquadSeeder::class);
     }
 }
