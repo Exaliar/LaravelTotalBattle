@@ -32,8 +32,8 @@ class Monster extends Model
         'graphics'
     ];
 
-    // public function normalMonsterSquad()
-    // {
-    // return $this->belongsTo(NormalMonsterSquad::class, 'id');
-    // }
+    public function squadMonster()
+    {
+        return $this->belongsTo(SquadMonster::class);
+    }
 }

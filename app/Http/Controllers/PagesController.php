@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\SquadTypes;
 use App\Models\CitadelMonsterSquad;
 use App\Models\HeroicMonsterSquad;
 use App\Models\NormalMonsterSquad;
+use App\Models\SquadMonster;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -18,10 +20,15 @@ class PagesController extends Controller
     public function calculator()
     {
         // dd(NormalMonsterSquad::with(['firstMonster', 'secondMonster'])->get());
-        $normalMonsters = CitadelMonsterSquad::all();
+        $normalMonsters = SquadMonster::select('id', 'squad_type', 'lvl', 'type', 'first_monster', 'first_monster_count')
+            ->where('squad_type', SquadTypes::NORMAL)
+            ->where('id', 91)
+            ->with(['firstMonster', 'secondMonster'])
+            ->orderBy('lvl')
+            ->first();
         foreach ($normalMonsters as $normalMonster) {
-            dd($normalMonster);
-            // dd($normalMonster->first_unit_count * $normalMonster->firstMonster->strength);
+            ddd($normalMonsters);
+            //     dd($normalMonster->first_unit_count * $normalMonster->firstMonster->strength);
         }
         // dd($normalMonsters);
         return view('calculator');

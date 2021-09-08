@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class MonsterSeeder extends Seeder
+class SquadMonsterSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +13,6 @@ class MonsterSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Monster::factory(30)->create();
+        \App\Models\SquadMonster::factory(200)->create();
     }
 }
