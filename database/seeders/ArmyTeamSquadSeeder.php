@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class NormalMonsterSquadSeeder extends Seeder
+class ArmyTeamSquadSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +13,6 @@ class NormalMonsterSquadSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\NormalMonsterSquad::factory(10)->create();
+        \App\Models\ArmyTeamSquad::factory(50)->create();
     }
 }

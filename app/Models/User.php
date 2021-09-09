@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(HomePost::class);
     }
+
+    public function armyTeamSquad()
+    {
+        return $this->hasMany(ArmyTeamSquad::class);
+    }
 }

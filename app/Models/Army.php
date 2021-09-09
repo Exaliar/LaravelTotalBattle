@@ -6,19 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Monster extends Model
+class Army extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $table = 'monsters';
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $filable = [
         'lvl',
         'name',
+        'menu_type',
         'first_type',
         'second_type',
         'third_type',
@@ -32,14 +27,4 @@ class Monster extends Model
         'third_bonus_who',
         'graphics'
     ];
-
-    public function squadMonster()
-    {
-        return $this->belongsTo(SquadMonster::class);
-    }
-
-    public function armyTeamSquad()
-    {
-        return $this->belongsTo(ArmyTeamSquad::class);
-    }
 }

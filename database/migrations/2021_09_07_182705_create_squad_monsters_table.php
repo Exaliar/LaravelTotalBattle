@@ -32,6 +32,7 @@ class CreateSquadMonstersTable extends Migration
             $table->unsignedInteger('fifth_monster_count');
             $table->foreignId('sixth_monster')->nullable()->constrained('monsters');
             $table->unsignedInteger('sixth_monster_count');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
