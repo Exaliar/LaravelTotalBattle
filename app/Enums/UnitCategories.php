@@ -16,9 +16,9 @@ class UnitCategories
     const GIANT = 'giant';
     const DRAGON = 'dragon';
     const HUMAN = 'human';
-    const GUARDSMAN = 'guardsman';
-    const SPECIALIST = 'specialist';
-    const ENGINEER_CORP = 'engineer_corp';
+    // const GUARDSMAN = 'guardsman';
+    // const SPECIALIST = 'specialist';
+    // const ENGINEER_CORP = 'engineer_corp';
 
     const TYPES = [
         self::MELEE_UNIT,
@@ -33,8 +33,8 @@ class UnitCategories
         self::GIANT,
         self::DRAGON,
         self::HUMAN,
-        self::GUARDSMAN,
-        self::SPECIALIST,
-        self::ENGINEER_CORP,
+        // self::GUARDSMAN,
+        // self::SPECIALIST,
+        // self::ENGINEER_CORP,
     ];
 }

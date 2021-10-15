@@ -7,7 +7,7 @@ class MenuTypes
     const GUARDSMAN = 'guardsman';
     const SPECIALIST = 'specialist';
     const ENGINEER_CORP = 'engineer_corp';
-    const SIEGE_ENGINE = 'siege_engine';
+    // const SIEGE_ENGINE = 'siege_engine';
     const DRAGON = 'dragon';
     const ELEMENTAL = 'elemental';
     const GIANT = 'giant';
@@ -22,7 +22,7 @@ class MenuTypes
         self::ELEMENTAL,
         self::GIANT,
         self::BEAST,
-        self::SIEGE_ENGINE,
+        // self::SIEGE_ENGINE,
         self::AUTHORITY
     ];
 }

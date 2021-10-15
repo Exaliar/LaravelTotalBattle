@@ -10112,6 +10112,113 @@ body {
   width: 25px;
 }
 
+.lvl-O {
+  color: #fff;
+  border-color: #444444;
+  background-color: #444444;
+}
+
+.lvl-I {
+  color: #fff;
+  border-color: #c0c0c0;
+  background-color: #c0c0c0;
+}
+
+.lvl-II {
+  color: #fff;
+  border-color: #008000;
+  background-color: #008000;
+}
+
+.lvl-III {
+  color: #fff;
+  border-color: #0000ff;
+  background-color: #0000ff;
+}
+
+.lvl-IV {
+  color: #fff;
+  border-color: #800080;
+  background-color: #800080;
+}
+
+.lvl-V {
+  color: #fff;
+  border-color: #ff6600;
+  background-color: #ff6600;
+}
+
+.lvl-VI {
+  color: #fff;
+  border-color: #cc0000;
+  background-color: #cc0000;
+}
+
+.lvl-VII {
+  color: #fff;
+  border-color: #ffcc00;
+  background-color: #ffcc00;
+}
+
+.hiddenRow {
+  padding: 0 !important;
+}
+
+.table-calculator {
+  color: #ebe4cc;
+  background-color: #8a2be2;
+}
+
+.border-second {
+  border-color: #ebe4cc !important;
+}
+
+.w-1000p {
+  width: 1000px !important;
+}
+
+.w-250p {
+  width: 250px !important;
+}
+
+.w-200p {
+  width: 200px !important;
+}
+
+.w-150p {
+  width: 150px !important;
+}
+
+.w-125p {
+  width: 125px !important;
+}
+
+.w-100p {
+  width: 100px !important;
+}
+
+.w-50p {
+  width: 50px !important;
+}
+
+.raport-live {
+  background: linear-gradient(to right, transparent, #38c172);
+}
+
+.raport-deth {
+  background: linear-gradient(to right, transparent, #e3342f);
+}
+
+.raport-killed {
+  top: 0;
+  left: 25%;
+  color: red;
+}
+
+.opa-30 {
+  opacity: 0.3;
+}
+
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

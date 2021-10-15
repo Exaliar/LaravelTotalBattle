@@ -4,8 +4,6 @@ body {
 
 .nav-link {
     color: $color-second !important;
-    // font-size: large;
-    // padding-right: 30px;
 }
 
 .active {
@@ -30,7 +28,6 @@ body {
 
 .logo {
     width: 200px;
-    // height: 50px;
 }
 
 .font-inconsolata {
@@ -124,4 +121,111 @@ body {
         width: 25px;
     }
 
+}
+
+.lvl-O {
+    color: #fff;
+    border-color: $lvl-O-color;
+    background-color: $lvl-O-color;
+}
+
+.lvl-I {
+    color: #fff;
+    border-color: $lvl-I-color;
+    background-color: $lvl-I-color;
+}
+
+.lvl-II {
+    color: #fff;
+    border-color: $lvl-II-color;
+    background-color: $lvl-II-color;
+}
+
+.lvl-III {
+    color: #fff;
+    border-color: $lvl-III-color;
+    background-color: $lvl-III-color;
+}
+
+.lvl-IV {
+    color: #fff;
+    border-color: $lvl-IV-color;
+    background-color: $lvl-IV-color;
+}
+
+.lvl-V {
+    color: #fff;
+    border-color: $lvl-V-color;
+    background-color: $lvl-V-color;
+}
+
+.lvl-VI {
+    color: #fff;
+    border-color: $lvl-VI-color;
+    background-color: $lvl-VI-color;
+}
+
+.lvl-VII {
+    color: #fff;
+    border-color: $lvl-VII-color;
+    background-color: $lvl-VII-color;
+}
+
+.hiddenRow {
+    padding: 0 !important;
+}
+
+.table-calculator {
+    color: $color-second;
+    background-color: $border-color;
+}
+
+.border-second {
+    border-color: $color-second !important;
+}
+
+.w-1000p {
+    width: 1000px !important;
+}
+
+.w-250p {
+    width: 250px !important;
+}
+
+.w-200p {
+    width: 200px !important;
+}
+
+.w-150p {
+    width: 150px !important;
+}
+
+.w-125p {
+    width: 125px !important;
+}
+
+.w-100p {
+    width: 100px !important;
+}
+
+.w-50p {
+    width: 50px !important;
+}
+
+.raport-live {
+    background: linear-gradient(to right, transparent, $success);
+}
+
+.raport-deth {
+    background: linear-gradient(to right, transparent, $danger);
+}
+
+.raport-killed {
+    top: 0;
+    left: 25%;
+    color: red;
+}
+
+.opa-30 {
+    opacity: 0.3;
 }

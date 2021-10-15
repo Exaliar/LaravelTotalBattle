@@ -28,15 +28,15 @@ class SquadMonster extends Model
         'sixth_monster_count',
     ];
 
-    // protected $with = [
-    //     'firstMonster',
-    //     'secondMonster',
-    //     'thirdMonster',
-    //     'fourthMonster',
-    //     'fifthMonster',
-    //     'sixthMonster',
-    //     'seventhMonster'
-    // ];
+    protected $with = [
+        'firstMonster',
+        'secondMonster',
+        'thirdMonster',
+        'fourthMonster',
+        'fifthMonster',
+        'sixthMonster',
+        'seventhMonster'
+    ];
 
     public function firstMonster()
     {
