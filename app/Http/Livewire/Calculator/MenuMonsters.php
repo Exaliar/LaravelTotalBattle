@@ -9,11 +9,13 @@ use App\Models\Army;
 use App\Models\SquadMonster;
 use App\Services\MenuArmyService;
 use App\Services\MenuMonstersService;
+use Illuminate\Support\Facades\Session;
 use Livewire\Component;
 
 class MenuMonsters extends Component
 {
 
+    protected $listeners = ['monster'];
     public $monsters = [];
     public $monsterTypes;
 
@@ -22,21 +24,16 @@ class MenuMonsters extends Component
         return view('livewire.calculator.menu-monsters');
     }
 
-    public function mount()
+    public function mount($id = 1)
     {
 
-        $this->monsters = SquadMonster::inRandomOrder()->first()->toArray();
-        // ddd();
-        // foreach (SquadTypes::TYPES as $type) {
-        //     $this->monsters[$type] = SquadMonster::select('id', 'lvl', 'type')
-        //         ->where('squad_type', $type)
-        //         ->orderBy('lvl', 'ASC')
-        //         ->get()
-        //         ->toArray();
-        // }
-        // $prepareData = new MenuMonstersService();
-        // $this->monsters = $prepareData->prepareDataForMenu($this->monsters, 5, 50);
+        $this->monsters = SquadMonster::where('id', '=', $id)->first()->toArray();
 
-        // $this->monsterTypes = MonsterTypes::TYPES;
+    }
+
+    public function monster($id)
+    {
+        $this->monsters = SquadMonster::where('id', $id)->first()->toArray();
+        $this->dispatchBrowserEvent('closeModal');
     }
 }

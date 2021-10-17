@@ -21,23 +21,7 @@ class PagesController extends Controller
 
     public function calculator()
     {
-
-        $army = [];
-
-        foreach (MenuTypes::TYPES as $type) {
-            $army[$type] = Army::select('id', 'name', 'lvl')
-                ->where('menu_type', $type)
-                ->orderBy('lvl', 'ASC')
-                ->get()
-                ->toArray();
-        }
-        $prepareData = new MenuArmyService();
-        $army = $prepareData->prepareDataForMenu($army, 10);
-
-        return view('calculator')
-            ->with('armies', $army)
-            // ->with('monsterTypes', MonsterTypes::TYPES)
-            ->with('armyTypes', MenuTypes::TYPES);
+        return view('calculator');
     }
 
     public function forum()

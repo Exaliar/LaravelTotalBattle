@@ -1,9 +1,5 @@
 <div>
-    {{-- "id" => 146
-    "squad_type" => "heroic"
-    "lvl" => 41
-    "type" => "undead"
-    "first_monster" => array:18 [▶]
+    {{-- "first_monster" => array:18 [▶]
     "first_monster_count" => 2995
     "second_monster" => array:18 [▶]
     "second_monster_count" => 2838
@@ -15,17 +11,28 @@
     "fifth_monster_count" => 2035
     "sixth_monster" => array:18 [▶]
     "sixth_monster_count" => 5099
-    "deleted_at" => null
-    "created_at" => "2021-10-03T09:38:11.000000Z"
-    "updated_at" => "2021-10-03T09:38:11.000000Z"
     "seventh_monster" => null --}}
-    <tr>
-        <td data-toggle="collapse" data-target="#monster" class="accordion-toggle text-center" style="cursor:pointer">{{ ucfirst($monsters['squad_type']) }}</td>
-        <td data-toggle="collapse" data-target="#monster" class="accordion-toggle text-center" style="cursor:pointer">{{ $monsters['lvl'] }}</td>
-        <td data-toggle="collapse" data-target="#monster" class="accordion-toggle text-center" style="cursor:pointer">{{ ucfirst($monsters['type']) }}</td>
-        <td colspan="2" class="text-center"><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".monster-modal">Zmień</button></td>
-        {{-- {{ ddd($monsters->witch()) }} --}}
-    </tr>
+    <table class="table table-dark table-hover m-0">
+
+        <thead>
+            <tr>
+                <th colspan="6" class="text-center table-calculator">Przeciwnik</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th class="text-center">Rodzaj</th>
+                <th class="text-center">Lvl</th>
+                <th class="text-center">Typ</th>
+                <th class="text-center">Menu</th>
+            </tr>
+            <tr>
+                <td data-toggle="collapse" data-target="#monster" class="accordion-toggle text-center" style="cursor:pointer">{{ ucfirst($monsters['squad_type']) }}</td>
+                <td data-toggle="collapse" data-target="#monster" class="accordion-toggle text-center" style="cursor:pointer">{{ $monsters['lvl'] }}</td>
+                <td data-toggle="collapse" data-target="#monster" class="accordion-toggle text-center" style="cursor:pointer">{{ ucfirst($monsters['type']) }}</td>
+                <td colspan="2" class="text-center"><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".monster-modal">Zmień</button></td>
+            </tr>
     <tr>
         <td colspan="6" class="hiddenRow">
             <div class="accordian-body collapse" id="monster">
@@ -108,4 +115,8 @@
             </div>
         </td>
     </tr>
+
+</tbody>
+
+</table>
 </div>
