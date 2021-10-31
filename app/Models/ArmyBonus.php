@@ -12,6 +12,7 @@ class ArmyBonus extends Model
 
     protected $fillable = [
         'army_id',
+        'army_team_squad_id',
         'number_units',
         'bonus_ap',
         'bonus_hp'
@@ -19,6 +20,7 @@ class ArmyBonus extends Model
 
     protected $with = [
         'army',
+        // 'armyTeamSquad'
     ];
 
     public function army()

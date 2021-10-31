@@ -48,7 +48,8 @@
                                                                 <th class="align-middle text-center p-0" scope="row">{{ $lvl }}</th>
                                                                 @if (isset($lvlMonsterBetwen[$lvl][$monsterTypes[0]]))
                                                                     <td class="p-1 text-center">
-                                                                        <a wire:click="$emit('monster' ,{{$lvlMonsterBetwen[$lvl][$monsterTypes[0]]['id'] }})" href="#" role="button" class="align-middle btn btn-success btn-sm" style="width: 90px">{{ ucfirst($monsterTypes[0]) }}</a>
+                                                                        <a wire:click="$emit('monster' ,{{ $lvlMonsterBetwen[$lvl][$monsterTypes[0]]['id'] }})" href="#" role="button"
+                                                                            class="align-middle btn btn-success btn-sm" style="width: 90px">{{ ucfirst($monsterTypes[0]) }}</a>
                                                                     </td>
                                                                 @else
                                                                     <td class="p-1 text-center"><button type="button" class="align-middle btn btn-secondary btn-lg disabled btn-sm" style="width: 90px">Brak</button></td>
@@ -56,7 +57,7 @@
 
                                                                 @if (isset($lvlMonsterBetwen[$lvl][$monsterTypes[1]]))
                                                                     <td class="p-1 text-center">
-                                                                        <a wire:click="$emit('monster' ,{{$lvlMonsterBetwen[$lvl][$monsterTypes[1]]['id'] }})" href="#" role="button"
+                                                                        <a wire:click="$emit('monster' ,{{ $lvlMonsterBetwen[$lvl][$monsterTypes[1]]['id'] }})" href="#" role="button"
                                                                             class="align-middle btn btn-success btn-sm" style="width: 90px">{{ ucfirst($monsterTypes[1]) }}</a>
                                                                     </td>
                                                                 @else
@@ -65,7 +66,7 @@
 
                                                                 @if (isset($lvlMonsterBetwen[$lvl][$monsterTypes[2]]))
                                                                     <td class="p-1 text-center">
-                                                                        <a wire:click="$emit('monster' ,{{$lvlMonsterBetwen[$lvl][$monsterTypes[2]]['id'] }})" href="#" role="button"
+                                                                        <a wire:click="$emit('monster' ,{{ $lvlMonsterBetwen[$lvl][$monsterTypes[2]]['id'] }})" href="#" role="button"
                                                                             class="align-middle btn btn-success btn-sm" style="width: 90px">{{ ucfirst($monsterTypes[2]) }}</a>
                                                                     </td>
                                                                 @else
@@ -74,7 +75,7 @@
 
                                                                 @if (isset($lvlMonsterBetwen[$lvl][$monsterTypes[3]]))
                                                                     <td class="p-1 text-center">
-                                                                        <a wire:click="$emit('monster' ,{{$lvlMonsterBetwen[$lvl][$monsterTypes[3]]['id'] }})" href="#" role="button"
+                                                                        <a wire:click="$emit('monster' ,{{ $lvlMonsterBetwen[$lvl][$monsterTypes[3]]['id'] }})" href="#" role="button"
                                                                             class="align-middle btn btn-success btn-sm" style="width: 90px">{{ ucfirst($monsterTypes[3]) }}</a>
                                                                     </td>
                                                                 @else
@@ -83,7 +84,7 @@
 
                                                                 @if (isset($lvlMonsterBetwen[$lvl][$monsterTypes[4]]))
                                                                     <td class="p-1 text-center">
-                                                                        <a wire:click="$emit('monster' ,{{$lvlMonsterBetwen[$lvl][$monsterTypes[4]]['id'] }})" href="#" role="button"
+                                                                        <a wire:click="$emit('monster' ,{{ $lvlMonsterBetwen[$lvl][$monsterTypes[4]]['id'] }})" href="#" role="button"
                                                                             class="align-middle btn btn-success btn-sm" style="width: 90px">{{ ucfirst($monsterTypes[4]) }}</a>
                                                                     </td>
                                                                 @else

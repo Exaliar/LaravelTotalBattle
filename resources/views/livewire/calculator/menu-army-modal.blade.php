@@ -37,7 +37,7 @@
                                                 <td>{{ ucfirst($name) }}</td>
                                                 <td>
                                                     @foreach ($lvls as $lvl => $id)
-                                                        <a href="#{{ $id }}"
+                                                        <a wire:click="$emit('army', {{ $id }})" href="#"
                                                             class="btn btn-sm
                                                         @if ($lvl == 1) lvl-I @endif
                                                         @if ($lvl == 2) lvl-II @endif

@@ -29,7 +29,7 @@ Route::resources([
 ]);
 // Route::resource('home', HomePostController::class)->middleware('can:isAdmin')->except('index', 'show');
 
-Route::get('/calculator', [PagesController::class, 'calculator'])->name('calculator');
+Route::get('/calculator', [PagesController::class, 'calculator'])->name('calculator')->middleware('auth');
 // Route::get('/calculator/monster/{$id}', [MenuMonsters::class]);
 Route::get('/forum', [PagesController::class, 'forum'])->name('forum');
 Route::get('/about', [PagesController::class, 'about'])->name('about');

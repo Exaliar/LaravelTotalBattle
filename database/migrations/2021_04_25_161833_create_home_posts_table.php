@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Facade\Ignition\Tabs\Tab;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -19,7 +20,7 @@ class CreateHomePostsTable extends Migration
             $table->string('title');
             $table->string('photo_path')->nullable();
             $table->text('description');
-            $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignIdFor(User::class)->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
             $table->boolean('top_post')->default(false);

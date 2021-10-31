@@ -27,4 +27,9 @@ class Army extends Model
         'third_bonus_who',
         'graphics'
     ];
+
+    public function armyBonus()
+    {
+        $this->belongsTo(ArmyBonus::class);
+    }
 }

@@ -9,6 +9,8 @@ use App\Enums\MonsterTypes;
 use App\Enums\SquadTypes;
 use App\Models\Armia;
 use App\Models\Army;
+use App\Models\ArmyBonus;
+use App\Models\ArmyTeamSquad;
 use App\Models\SquadMonster;
 use App\Models\User;
 use App\Services\ConvertDatabaseTypesToNewTableService;
@@ -26,7 +28,32 @@ class PagesController extends Controller
 
     public function forum()
     {
-        return view('forum');
+        // $users =  User::find(1);
+        // return $users->armyTeamSquads;
+        $armyTeam = ArmyTeamSquad::find(1);
+
+        $test = new ArmyBonus([
+            'army_id' => 1,
+            'number_units' => 1234,
+            'bonus_ap' => 5555,
+            'bonus_hp' => 6666
+        ]);
+
+        $armyTeam->armyBonus()->save($test);
+
+
+        return $armyTeam;
+
+        // 'army_id',
+        // 'army_team_squad_id',
+        // 'number_units',
+        // 'bonus_ap',
+        // 'bonus_hp'
+        // foreach ($users as $key => $user) {
+        //     # code...
+        //     return $user->armyTeamSquads;
+        // }
+        // return view('forum', compact('users'));
     }
 
     public function about()

@@ -27,7 +27,7 @@ class ArmyTeamSquadFactory extends Factory
         return [
             'user_id' => User::all()->random()->id,
             'monster_id' => Monster::all()->random()->id,
-            'army_bonus_id' => ArmyBonus::all()->random()->id,
+            // 'army_bonus_id' => ArmyBonus::all()->random()->id,
             'published' => $this->faker->boolean(),
             'num_team' => $this->faker->numberBetween(1, 5),
         ];

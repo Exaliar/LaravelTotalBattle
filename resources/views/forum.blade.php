@@ -6,6 +6,14 @@
             <div class="container">
                 <div class="card">
                     <h1>Forum Content</h1>
+
+
+                    @foreach ($users as $user)
+
+                        {{ $user->armyTeamSquads }}
+
+                    @endforeach
+
                 </div>
             </div>
         </main>

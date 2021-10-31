@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(MonsterSeeder::class);
         $this->call(SquadMonsterSeeder::class);
         $this->call(ArmySeeder::class);
-        $this->call(ArmyBonusSeeder::class);
         $this->call(ArmyTeamSquadSeeder::class);
+        $this->call(ArmyBonusSeeder::class);
     }
 }
