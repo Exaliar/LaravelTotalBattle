@@ -12,16 +12,16 @@ class ArmyTeamSquad extends Model
 
     protected $filable = [
         'user_id',
-        'monster_id',
+        'squad_monster_id',
         // 'army_bonus_id',
         'published',
         'num_team',
     ];
 
     protected $with = [
-        'user',
-        'monster',
-        'armyBonus',
+        // 'user',
+        // 'monster',
+        // 'armyBonus',
     ];
 
     public function user()
@@ -31,7 +31,7 @@ class ArmyTeamSquad extends Model
 
     public function monster()
     {
-        return $this->hasOne(Monster::class, 'id', 'monster_id');
+        return $this->hasOne(SquadMonster::class, 'id', 'squad_monster_id');
     }
 
     public function armyBonus()

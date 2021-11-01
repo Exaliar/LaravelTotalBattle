@@ -28,8 +28,8 @@ class PagesController extends Controller
 
     public function forum()
     {
-        // $users =  User::find(1);
-        // return $users->armyTeamSquads;
+        $users =  User::find(2);
+        return $users->armyTeamSquads;
         $armyTeam = ArmyTeamSquad::find(1);
 
         $test = new ArmyBonus([
@@ -63,6 +63,12 @@ class PagesController extends Controller
 
     public function profile()
     {
-        return view('auth.profile');
+        $users =  User::with(['armyTeamSquads' => function($query){
+            $query->select('id', 'user_id', 'squad_monster_id', 'published')
+                ->with(['monster' => function($query){
+                    $query->select('squad_type', 'lvl', 'type');
+            }]);
+        }])->get();
+        return view('auth.profile')->with('users', $users);
     }
 }

@@ -19,7 +19,7 @@ class ArmyBonus extends Model
     ];
 
     protected $with = [
-        'army',
+        // 'army',
         // 'armyTeamSquad'
     ];
 

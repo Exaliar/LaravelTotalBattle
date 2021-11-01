@@ -35,7 +35,7 @@ class SquadMonster extends Model
         'fourthMonster',
         'fifthMonster',
         'sixthMonster',
-        'seventhMonster'
+        'seventhMonster' // test this monster not exist
     ];
 
     public function firstMonster()

@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Monster;
+use App\Models\SquadMonster;
 use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -18,10 +19,10 @@ class CreateArmyTeamSquadsTable extends Migration
         Schema::create('army_team_squads', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class)->constrained();
-            $table->foreignIdFor(Monster::class)->constrained();
+            $table->foreignIdFor(SquadMonster::class)->constrained();
             // $table->foreignId('army_bonus_id')->constrained();
             $table->boolean('published')->default(false);
-            $table->tinyInteger('num_team');
+            // $table->tinyInteger('num_team');
             $table->softDeletes();
             $table->timestamps();
         });
