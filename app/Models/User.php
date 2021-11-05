@@ -51,4 +51,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(ArmyTeamSquad::class);
     }
+
+    public function squadMonsters()
+    {
+        return $this->hasManyThrough(ArmyTeamSquad::class, SquadMonster::class);
+    }
 }

@@ -29,9 +29,14 @@ class ArmyTeamSquad extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function monster()
+    public function getSquadMonster()
     {
-        return $this->hasOne(SquadMonster::class, 'id', 'squad_monster_id');
+        return $this->belongsTo(SquadMonster::class);
+    }
+
+    public function squadMonster()
+    {
+        return $this->hasOne(SquadMonster::class, 'id', 'squad_monster_id'); //, 'id', 'squad_monster_id'
     }
 
     public function armyBonus()

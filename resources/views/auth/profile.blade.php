@@ -7,15 +7,15 @@
                 <div class="card">
                     <h1>Profile content</h1>
                     @foreach ($users as $user)
-                    {{-- {{ddd(($user->armyTeamSquads))}} --}}
-                    @foreach ($user->armyTeamSquads as $sqads)
-                    <pre>
-{{$sqads}}
-                    </pre>
-                        @foreach ($sqads as $eachSquad)
+                        {{ ddd($users) }}
+                        @foreach ($user->armyTeamSquads as $sqads)
+                            <pre>
+                                    {{ $sqads }}
+                                </pre>
+                            @foreach ($sqads as $eachSquad)
 
+                            @endforeach
                         @endforeach
-                    @endforeach
                     @endforeach
                 </div>
             </div>

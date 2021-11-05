@@ -63,12 +63,13 @@ class PagesController extends Controller
 
     public function profile()
     {
-        $users =  User::with(['armyTeamSquads' => function($query){
+        $users =  User::with(['armyTeamSquads' => function ($query) {
             $query->select('id', 'user_id', 'squad_monster_id', 'published')
-                ->with(['monster' => function($query){
-                    $query->select('squad_type', 'lvl', 'type');
-            }]);
+                ->with(['squadMonster' => function ($query) {
+                    // $query->select('squad_type', 'lvl', 'type');
+                }]);
         }])->get();
+        // $users = ArmyTeamSquad::with('getSquadMonster')->get();
         return view('auth.profile')->with('users', $users);
     }
 }

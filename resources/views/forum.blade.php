@@ -10,6 +10,8 @@
 
                     @foreach ($users as $user)
 
+                        {{ $user->squadMonsters }}
+                        <br>
                         {{ $user->armyTeamSquads }}
 
                     @endforeach
